@@ -173,24 +173,31 @@ button,a,input{
 }
 
 .bottom-nav a{
-    width:52px;
-    height:52px;
+    width:54px;
+    height:54px;
     display:flex;
     align-items:center;
     justify-content:center;
     padding-bottom:0;
     text-decoration:none;
+    border-radius:15px;
+    border:1px solid #bfc0c2;
+    background:linear-gradient(180deg,#ffffff 0%,#f1f1f1 48%,#d8d8d8 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.95),
+        inset 0 -2px 4px rgba(0,0,0,.10),
+        0 3px 7px rgba(0,0,0,.16);
 }
 
 .bottom-nav img,
 .bottom-nav a.home img{
-    width:52px;
-    height:52px;
+    width:46px;
+    height:46px;
     object-fit:contain;
     display:block;
     margin-top:0;
     border-radius:0;
-    box-shadow:none;
+    box-shadow:0 2px 4px rgba(0,0,0,.16);
 }
 
 @keyframes noticeMove{
@@ -323,20 +330,23 @@ button,a,input{
     .side-tabs{width:50px}
     .side-tabs button{width:50px;height:50px}
     .game-card{height:116px}
-    .bottom-nav a{width:50px;height:50px}
+    .bottom-nav a{width:52px;height:52px}
     .bottom-nav img,
-    .bottom-nav a.home img{width:50px;height:50px}
+    .bottom-nav a.home img{width:44px;height:44px}
     
 }
 
 
-.bottom-nav a img{
-    transition:transform .12s ease, filter .12s ease;
+.bottom-nav a{
+    transition:transform .12s ease, filter .12s ease, box-shadow .12s ease;
 }
 
-.bottom-nav a:active img{
+.bottom-nav a:active{
     transform:scale(.94);
     filter:brightness(1.06);
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,.12),
+        0 1px 3px rgba(0,0,0,.12);
 }
 
 </style>
