@@ -80,11 +80,13 @@ button,a,input{
     transition:all .25s ease;
 }
 
-.banner video{
+.banner video,
+.banner img{
     width:100%;
     height:100%;
-    object-fit:cover;
+    object-fit:contain;
     display:block;
+    background:#f2f3f7;
 }
 
 .dots{
@@ -322,11 +324,13 @@ button,a,input{
     position:relative;
 }
 
-.game-card video{
+.game-card video,
+.game-card img{
     width:100%;
     height:100%;
-    object-fit:cover;
+    object-fit:contain;
     display:block;
+    background:#f4f5f9;
 }
 
 /* 6시 하단 헤더 */
@@ -401,19 +405,19 @@ button,a,input{
 
     <main class="game-list">
         <div id="casinoList">
-            <a class="game-card" href="../casino/evolution/index.html"><img src="../../image/evolution.png" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
-            <a class="game-card" href="../casino/pragmatic/index.html"><img src="../../image/pragmatic-casino.png" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
-            <a class="game-card" href="../casino/ag/index.html"><img src="../../image/ag.png" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
-            <a class="game-card" href="../casino/wm/index.html"><img src="../../image/wm.png" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
-            <a class="game-card" href="../casino/dreamgame/index.html"><img src="../../image/dreamgame.png" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
+            <a class="game-card" href="../casino/evolution/index.html"><img src="../../image/evolution.png" style="width:100%;height:100%;object-fit:contain;display:block;background:#f4f5f9;"></a>
+            <a class="game-card" href="../casino/pragmatic/index.html"><img src="../../image/pragmatic-casino.png" style="width:100%;height:100%;object-fit:contain;display:block;background:#f4f5f9;"></a>
+            <a class="game-card" href="../casino/ag/index.html"><img src="../../image/ag.png" style="width:100%;height:100%;object-fit:contain;display:block;background:#f4f5f9;"></a>
+            <a class="game-card" href="../casino/wm/index.html"><img src="../../image/wm.png" style="width:100%;height:100%;object-fit:contain;display:block;background:#f4f5f9;"></a>
+            <a class="game-card" href="../casino/dreamgame/index.html"><img src="../../image/dreamgame.png" style="width:100%;height:100%;object-fit:contain;display:block;background:#f4f5f9;"></a>
         </div>
 
         <div id="slotList" style="display:none">
-            <a class="game-card" href="../slot/pragmatic/index.html"><img src="../../image/pragmatic-slot.png" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
-            <a class="game-card" href="../slot/boongo/index.html"><img src="../../image/boongo.png" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
-            <a class="game-card" href="../slot/microgaming/index.html"><img src="../../image/microgaming.png" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
-            <a class="game-card" href="../slot/pgsoft/index.html"><img src="../../image/pgsoft.png" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
-            <a class="game-card" href="../slot/skywind/index.html"><img src="../../image/skywind.png" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
+            <a class="game-card" href="../slot/pragmatic/index.html"><img src="../../image/pragmatic-slot.png" style="width:100%;height:100%;object-fit:contain;display:block;background:#f4f5f9;"></a>
+            <a class="game-card" href="../slot/boongo/index.html"><img src="../../image/boongo.png" style="width:100%;height:100%;object-fit:contain;display:block;background:#f4f5f9;"></a>
+            <a class="game-card" href="../slot/microgaming/index.html"><img src="../../image/microgaming.png" style="width:100%;height:100%;object-fit:contain;display:block;background:#f4f5f9;"></a>
+            <a class="game-card" href="../slot/pgsoft/index.html"><img src="../../image/pgsoft.png" style="width:100%;height:100%;object-fit:contain;display:block;background:#f4f5f9;"></a>
+            <a class="game-card" href="../slot/skywind/index.html"><img src="../../image/skywind.png" style="width:100%;height:100%;object-fit:contain;display:block;background:#f4f5f9;"></a>
         </div>
     </main>
 </section>
@@ -440,7 +444,7 @@ const bannerBox = document.getElementById("bannerBox");
 
 function renderBanner(){
     bannerBox.innerHTML = `
-        <img src="${bannerVideos[bannerIndex]}" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <img src="${bannerVideos[bannerIndex]}" style="width:100%;height:100%;object-fit:contain;display:block;background:#f2f3f7;">
         <div class="dots">
             <button class="dot ${bannerIndex === 0 ? "active" : ""}" onclick="goBanner(0)"></button>
             <button class="dot ${bannerIndex === 1 ? "active" : ""}" onclick="goBanner(1)"></button>
