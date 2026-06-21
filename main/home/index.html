@@ -48,12 +48,14 @@ button,a,input{
     position:sticky;
     top:0;
     z-index:20;
+    overflow:hidden;
 }
 
 .logo-video{
     width:240px;
     height:60px;
     cursor:pointer;
+    overflow:hidden;
 }
 
 .logo-video video{
@@ -370,7 +372,7 @@ button,a,input{
 
 <header class="header">
     <div class="logo-video" onclick="location.reload()">
-        <img src="../../image/logo.png" alt="logo" style="width:100%;height:100%;object-fit:contain;display:block;transform:scale(1.45);transform-origin:center center;">
+        <img src="../../image/logo.png" alt="logo" style="width:100%;height:100%;object-fit:contain;display:block;transform:scale(1.60);transform-origin:center center;pointer-events:none;">
     </div>
 </header>
 
@@ -381,7 +383,7 @@ button,a,input{
 <section class="notice">
     <div class="notice-icon">📢</div>
     <div class="notice-view">
-        <div class="notice-track">공지사항 내용이 오른쪽에서 왼쪽으로 이동합니다. 이벤트 안내 / 점검 안내 / 가입 안내</div>
+        <div class="notice-track">! 필독 ! 타계좌 · 펌뱅킹(토스 · 카카오페이 · ATM) 사용 시 이용정지 되며 계좌팔이 강력 대응합니다.</div>
     </div>
 </section>
 
