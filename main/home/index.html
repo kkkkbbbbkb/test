@@ -131,6 +131,18 @@ button,a,input{
     width:36px;
     text-align:center;
     flex-shrink:0;
+    position:relative;
+    z-index:2;
+    background:#fff;
+    transform:scaleX(-1);
+}
+
+.notice-view{
+    flex:1;
+    height:36px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
 }
 
 .notice-track{
@@ -283,29 +295,20 @@ button,a,input{
     width:20%;
     height:72px;
     display:flex;
-    flex-direction:column;
     align-items:center;
     justify-content:center;
-    gap:2px;
     text-decoration:none;
-    color:#777;
-    font-size:11px;
-    font-weight:900;
 }
 
-.bottom-nav img{
-    width:40px;
-    height:40px;
+.bottom-nav img,
+.bottom-nav a.home img{
+    width:42px;
+    height:42px;
     object-fit:contain;
     display:block;
-}
-
-.bottom-nav a.home img{
-    width:52px;
-    height:52px;
-    margin-top:-22px;
-    border-radius:50%;
-    box-shadow:0 0 18px rgba(0,0,0,.18);
+    margin-top:0;
+    border-radius:0;
+    box-shadow:none;
 }
 
 @media(max-width:390px){
@@ -317,8 +320,8 @@ button,a,input{
     .side-tabs{width:50px}
     .side-tabs button{width:50px;height:50px}
     .game-card{height:116px}
-    .bottom-nav img{width:38px;height:38px}
-    .bottom-nav a.home img{width:50px;height:50px}
+    .bottom-nav img,
+    .bottom-nav a.home img{width:40px;height:40px}
 }
 </style>
 </head>
@@ -336,8 +339,10 @@ button,a,input{
 </section>
 
 <section class="notice">
-    <div class="notice-icon">🔊</div>
-    <div class="notice-track">공지사항 내용이 오른쪽에서 왼쪽으로 이동합니다. 이벤트 안내 / 점검 안내 / 가입 안내</div>
+    <div class="notice-icon">📢</div>
+    <div class="notice-view">
+        <div class="notice-track">공지사항 내용이 오른쪽에서 왼쪽으로 이동합니다. 이벤트 안내 / 점검 안내 / 가입 안내</div>
+    </div>
 </section>
 
 <section class="login-row">
