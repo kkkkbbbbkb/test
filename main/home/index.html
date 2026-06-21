@@ -84,7 +84,7 @@ button,a,input{
 .banner img{
     width:100%;
     height:100%;
-    object-fit:contain;
+    object-fit:fill;
     display:block;
     background:#f2f3f7;
 }
@@ -444,7 +444,7 @@ const bannerBox = document.getElementById("bannerBox");
 
 function renderBanner(){
     bannerBox.innerHTML = `
-        <img src="${bannerVideos[bannerIndex]}" style="width:100%;height:100%;object-fit:contain;display:block;background:#f2f3f7;">
+        <img src="${bannerVideos[bannerIndex]}" style="width:100%;height:100%;object-fit:fill;display:block;background:#f2f3f7;">
         <div class="dots">
             <button class="dot ${bannerIndex === 0 ? "active" : ""}" onclick="goBanner(0)"></button>
             <button class="dot ${bannerIndex === 1 ? "active" : ""}" onclick="goBanner(1)"></button>
