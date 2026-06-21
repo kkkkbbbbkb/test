@@ -184,9 +184,8 @@ button,a,input{
     justify-content:center;
     padding:0;
     text-decoration:none;
-    border-radius:15px;
-    border:1px solid transparent;
-    background:transparent;
+    border:none;
+    background:none;
     box-shadow:none;
 }
 
@@ -198,7 +197,7 @@ button,a,input{
     display:block;
     margin:2px 0 0;
     border-radius:0;
-    box-shadow:0 2px 4px rgba(0,0,0,.16);
+    box-shadow:none;
 }
 
 @keyframes noticeMove{
@@ -276,9 +275,9 @@ button,a,input{
 .side-tabs button{
     width:54px;
     height:54px;
-    border-radius:15px;
-    border:1px solid transparent;
-    background:transparent;
+    border-radius:0;
+    border:none;
+    background:none;
     margin-bottom:8px;
     overflow:hidden;
     padding:0;
@@ -289,9 +288,9 @@ button,a,input{
 }
 
 .side-tabs button.active{
-    border:1px solid rgba(120,120,120,.35);
-    background:rgba(255,255,255,.22);
-    box-shadow:0 2px 6px rgba(0,0,0,.10);
+    border:none;
+    background:none;
+    box-shadow:none;
 }
 
 .side-tabs img{
@@ -345,19 +344,15 @@ button,a,input{
 }
 
 
-.bottom-nav a,
-.side-tabs button{
-    transition:transform .12s ease, filter .12s ease, box-shadow .12s ease, background .12s ease;
+.bottom-nav a img,
+.side-tabs button img{
+    transition:transform .12s ease, filter .12s ease;
 }
 
-.bottom-nav a:active,
-.side-tabs button:active{
+.bottom-nav a:active img,
+.side-tabs button:active img{
     transform:scale(.94);
-    filter:brightness(1.04);
-    background:rgba(255,255,255,.32);
-    box-shadow:
-        0 3px 9px rgba(0,0,0,.18),
-        inset 0 1px 0 rgba(255,255,255,.45);
+    filter:drop-shadow(0 3px 7px rgba(0,0,0,.28));
 }
 
 </style>
